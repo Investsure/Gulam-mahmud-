@@ -138,6 +138,90 @@
   </div>
 </div>
 <br>
+<!-- Modhumoti Bank Typing Banner (Premium & Mobile Friendly) -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+
+<div class="modhumoti-type-banner">
+  <span class="material-icons-sharp modhumoti-icon">savings</span>
+  <span class="modhumoti-type-text" id="modhumoti-typed-text"></span>
+</div>
+
+<style>
+  .modhumoti-type-banner {
+    font-family: 'Roboto', sans-serif;
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #0d47a1;
+    background: linear-gradient(90deg, #e3f2fd, #ffffff);
+    padding: 10px 16px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(13, 71, 161, 0.15);
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+  }
+
+  .modhumoti-icon {
+    font-size: 1.8rem;
+    margin-right: 10px;
+    color: #1565c0;
+  }
+
+  .modhumoti-type-text {
+    border-right: 2px solid #1565c0;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  @media (max-width: 600px) {
+    .modhumoti-type-banner {
+      font-size: 1rem;
+      padding: 8px 12px;
+      border-radius: 10px;
+    }
+
+    .modhumoti-icon {
+      font-size: 1.5rem;
+      margin-right: 6px;
+    }
+  }
+</style>
+
+<script>
+  (function(){
+    const text = "Modhumoti Bank PLC - Your Access To Success ";
+    const el = document.getElementById("modhumoti-typed-text");
+    let idx = 0;
+    let typing = true;
+
+    function animateTyping() {
+      if (typing) {
+        if (idx <= text.length) {
+          el.textContent = text.slice(0, idx++);
+          setTimeout(animateTyping, 80);
+        } else {
+          typing = false;
+          setTimeout(animateTyping, 1200);
+        }
+      } else {
+        if (idx >= 0) {
+          el.textContent = text.slice(0, idx--);
+          setTimeout(animateTyping, 30);
+        } else {
+          typing = true;
+          setTimeout(animateTyping, 800);
+        }
+      }
+    }
+
+    animateTyping();
+  })();
+</script>
 
 <script>
   const topSlider = document.getElementById('topSlider');
@@ -443,8 +527,11 @@
 মধুমতি ব্যাংক – স্বচ্ছতা, নিরাপত্তা ও আধুনিকতার সম্মিলিত প্রতিচ্ছবি। </p>
   </div>
   
+  
 </section>
+
   </section>
+  
   <div class="service-section">
 <div class="card">
   <i class="fas fa-credit-card"></i>
@@ -472,6 +559,8 @@
   <p>Convenient and secure access to your funds through our extensive network of ATMs.</p>
 </div>
   </div>
+  <br>
+  
   <div class="custom-rating-box">
     <div class="rating-title">User Rating</div>
     <div class="stars">
@@ -483,6 +572,202 @@
     </div>
     <div class="rating-number">4.8 out of 5</div>
   </div>
+  
+  <script>
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('nav-open');
+    }
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate');
+        } else {
+          entry.target.classList.remove('animate');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+    document.querySelectorAll('.card').forEach(card => {
+      observer.observe(card);
+    });
+  </script>
+</body>
+</html>
+<!-- Ultra Premium Trusted Payment Section - Modhumoti Bank Exclusive -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+
+<section class="mb-exclusive-payments">
+  <h2 class="mb-exclusive-title">Trusted Payment Services</h2>
+  <div class="mb-exclusive-grid">
+    <div class="mb-card" onclick="mbRipple(event)">
+      <img src="https://img.icons8.com/color/96/visa.png" alt="Visa" />
+    </div>
+    <div class="mb-card" onclick="mbRipple(event)">
+      <img src="https://img.icons8.com/color/96/mastercard.png" alt="MasterCard" />
+    </div>
+    <div class="mb-card" onclick="mbRipple(event)">
+      <img src="https://img.icons8.com/fluency/96/amex.png" alt="Amex" />
+    </div>
+    <div class="mb-card" onclick="mbRipple(event)">
+      <img src="https://assets.onecompiler.app/43ea4pg72/43eq73f47/download%20(3).png" alt="bKash" />
+    </div>
+    <div class="mb-card" onclick="mbRipple(event)">
+      <img src="https://assets.onecompiler.app/43ea4pg72/43eq73f47/download%20(2).png" alt="Nagad" />
+    </div>
+    <div class="mb-card" onclick="mbRipple(event)">
+      <img src="https://assets.onecompiler.app/43ea4pg72/43eq73f47/download%20(6).png" alt="Rocket" />
+    </div>
+    <div class="mb-card" onclick="mbRipple(event)">
+      <img src="https://img.icons8.com/color/96/payoneer.png" alt="Payoneer" />
+    </div>
+    <div class="mb-card" onclick="mbRipple(event)">
+      <img src="https://img.icons8.com/color/96/paypal.png" alt="PayPal" />
+    </div>
+  </div>
+</section>
+
+<style>
+  .mb-exclusive-payments {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #e0f2f1, #e3f2fd);
+    padding: 80px 24px;
+    border-radius: 28px;
+    max-width: 1200px;
+    margin: 80px auto;
+    text-align: center;
+    position: relative;
+    isolation: isolate;
+    box-shadow: 0 10px 50px rgba(0, 77, 64, 0.1);
+    backdrop-filter: blur(10px);
+  }
+
+  .mb-exclusive-title {
+    font-size: 2.6rem;
+    color: #00695c;
+    margin-bottom: 50px;
+    font-weight: 700;
+    position: relative;
+    z-index: 2;
+    animation: fadeInUp 1.2s ease forwards;
+    opacity: 0;
+  }
+
+  .mb-exclusive-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .mb-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    padding: 18px;
+    box-shadow: 0 6px 20px rgba(0, 150, 136, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s;
+    overflow: hidden;
+    border: 1.5px solid transparent;
+    animation: zoomFade 1.2s ease forwards;
+    opacity: 0;
+  }
+
+  .mb-card:hover {
+    transform: scale(1.06);
+    border-color: rgba(0, 230, 118, 0.8);
+    box-shadow: 0 12px 30px rgba(0, 150, 136, 0.25);
+  }
+
+  .mb-card img {
+    max-width: 60px;
+    transition: transform 0.3s ease;
+  }
+
+  .mb-card:hover img {
+    transform: scale(1.1);
+  }
+
+  /* Ripple effect */
+  .mb-card .ripple {
+    position: absolute;
+    background: rgba(0, 200, 83, 0.25);
+    border-radius: 50%;
+    transform: scale(0);
+    animation: rippleEffect 0.6s linear;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  @keyframes rippleEffect {
+    to {
+      transform: scale(4);
+      opacity: 0;
+    }
+  }
+
+  @keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes zoomFade {
+    0% { opacity: 0; transform: scale(0.85); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+
+  @media (max-width: 600px) {
+    .mb-exclusive-title {
+      font-size: 1.8rem;
+    }
+
+    .mb-card {
+      padding: 12px;
+      border-radius: 16px;
+    }
+
+    .mb-card img {
+      max-width: 48px;
+    }
+  }
+</style>
+
+<script>
+  function mbRipple(e) {
+    const card = e.currentTarget;
+    const ripple = document.createElement("span");
+    ripple.classList.add("ripple");
+
+    const diameter = Math.max(card.clientWidth, card.clientHeight);
+    const radius = diameter / 2;
+
+    ripple.style.width = ripple.style.height = `${diameter}px`;
+    ripple.style.left = `${e.clientX - card.getBoundingClientRect().left - radius}px`;
+    ripple.style.top = `${e.clientY - card.getBoundingClientRect().top - radius}px`;
+
+    card.appendChild(ripple);
+    setTimeout(() => ripple.remove(), 600);
+  }
+
+  // In-view animation trigger
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.style.animationDelay = `${Math.random() * 0.3}s`;
+        entry.target.style.opacity = 1;
+        entry.target.classList.add('animated-in');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll('.mb-card, .mb-exclusive-title').forEach(el => {
+    observer.observe(el);
+  });
+</script>
   <footer class="custom-footer">
     <div class="footer-container">
       <div class="footer-info">
@@ -505,27 +790,7 @@
       <p>&copy; 2025 <a href="https://wa.me/message/BQ77IMY2MHW6E1" target="_blank" style="color: #FFD700; text-decoration: none; font-weight: bold;">Swygen Official</a> </p> All rights reserved.</p>
     </div>
   </footer>
-  <script>
-    function toggleMenu() {
-      document.getElementById('mobileMenu').classList.toggle('nav-open');
-    }
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate');
-        } else {
-          entry.target.classList.remove('animate');
-        }
-      });
-    }, {
-      threshold: 0.1
-    });
-    document.querySelectorAll('.card').forEach(card => {
-      observer.observe(card);
-    });
-  </script>
-</body>
-</html>
+
   <!DOCTYPE html>
   <html lang="en">
   <head>
