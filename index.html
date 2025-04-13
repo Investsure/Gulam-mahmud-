@@ -498,3 +498,172 @@
   </script>
 </body>
 </html>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Exclusive Live Chat</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet"/>
+  
+  <style>
+  .exclusive-chatbox-wrapper {
+  font-family: 'Poppins', sans-serif;
+  }
+  .exclusive-chatbox-wrapper .chatbot-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: linear-gradient(135deg, #7f00ff, #e100ff);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  z-index: 999;
+  cursor: pointer;
+  transition: 0.3s ease;
+  }
+  .exclusive-chatbox-wrapper .chatbot-btn:hover {
+  transform: scale(1.1);
+  }
+  .exclusive-chatbox-wrapper .chatbox {
+  position: fixed;
+  bottom: 110px;
+  right: 30px;
+  width: 340px;
+  background: linear-gradient(to bottom right, #1f1c2c, #928dab);
+  color: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  overflow: hidden;
+  display: none;
+  z-index: 998;
+  backdrop-filter: blur(12px);
+  }
+  .exclusive-chatbox-wrapper .chat-header {
+  padding: 18px;
+  background: linear-gradient(to right, #8e2de2, #4a00e0);
+  font-size: 17px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  }
+  .exclusive-chatbox-wrapper .chat-header i {
+  cursor: pointer;
+  }
+  .exclusive-chatbox-wrapper .chat-options {
+  padding: 20px;
+  }
+  .exclusive-chatbox-wrapper .chat-options button {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #ff512f, #dd2476);
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: all 0.3s;
+  }
+  .exclusive-chatbox-wrapper .chat-options button:hover {
+  transform: scale(1.05);
+  }
+  .exclusive-chatbox-wrapper .chat-response {
+  padding: 20px;
+  font-size: 14px;
+  line-height: 1.6;
+  }
+  .exclusive-chatbox-wrapper .confirm-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  }
+  .exclusive-chatbox-wrapper .confirm-buttons button {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  }
+  .exclusive-chatbox-wrapper .yes-btn {
+  background: linear-gradient(135deg, #00c853, #43e97b);
+  color: #fff;
+  }
+  .exclusive-chatbox-wrapper .yes-btn:hover,
+  .exclusive-chatbox-wrapper .no-btn:hover {
+  transform: scale(1.05);
+  }
+  .exclusive-chatbox-wrapper .no-btn {
+  background: linear-gradient(135deg, #d50000, #ff5252);
+  color: #fff;
+  }
+  </style>
+  </head>
+  <body>
+  <div class="exclusive-chatbox-wrapper">
+  <button class="chatbot-btn" onclick="toggleChat()">
+  <i class="bi bi-chat-dots"></i>
+  </button>
+  <div class="chatbox" id="chatbox">
+  <div class="chat-header">
+  <span>Live Support</span>
+  <i class="bi bi-x-circle" onclick="toggleChat()"></i>
+  </div>
+  <div class="chat-options">
+  <button onclick="showSupportMessage()">
+  <i class="bi bi-headset"></i> Customer Support
+  </button>
+  <button onclick="showDeveloperMessage()">
+  <i class="bi bi-person-video3"></i> Developer Contact
+  </button>
+  </div>
+  <div class="chat-response" id="responseBox"></div>
+  </div>
+  </div>
+  
+  <script>
+  function toggleChat() {
+  const box = document.getElementById("chatbox");
+  box.style.display = box.style.display === "block" ? "none" : "block";
+  document.getElementById("responseBox").innerHTML = '';
+  }
+  
+  function showSupportMessage() {
+  document.getElementById("responseBox").innerHTML = `
+  আপনার যেকোন সমস্যায় আমি <strong> Ghulam Mahmud Faridi</strong> সর্বদা আপনার পাশে আছে!
+  <br><br>
+  <strong>Support Time:</strong> প্রতিদিন সকাল ১০টা - রাত ১০টা পর্যন্ত।
+  <br><br>
+  WhatsApp: <a href="https://wa.me/8801918104161" style="color:#90ee90; font-weight:bold;" target="_blank">Click to Chat</a>
+  `;
+  }
+  
+  function showDeveloperMessage() {
+  document.getElementById("responseBox").innerHTML = `
+  <strong>দ্রষ্টব্য:</strong> এই ওয়েবসাইটের সাথে <strong>Developer Swygen</strong> এর সরাসরি কোনো সম্পর্ক নেই।
+  <br><br>
+  আপনি যদি এই রকম এক্সক্লুসিভ ডিজাইন, উন্নত ফিচার এবং হাই সিকিউরিটি ওয়েবসাইট তৈরি করতে চান,
+  তাহলে নিচে <strong>Yes</strong> ক্লিক করে যোগাযোগ করুন।
+  <div class="confirm-buttons">
+  <button class="yes-btn" onclick="window.open('https://wa.me/message/BQ77IMY2MHW6E1', '_blank')">Yes</button>
+  <button class="no-btn" onclick="toggleChat()">No</button>
+  </div>
+  `;
+  }
+  </script>
+  </body>
+  </html>
+</body></html>
