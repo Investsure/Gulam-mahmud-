@@ -1,0 +1,500 @@
+<!-- Modhumoti Bank Inline Style -->
+<div class="modhumoti-inline">
+  <div class="logo-section">
+    <img src="https://assets.onecompiler.app/43ea4pg72/43enzm9r7/mbl-logo.png" alt="Modhumoti Logo" />
+    <p>Your <span>Access</span> to Success</p>
+  </div>
+
+  <div class="icon-section">
+    <img src="https://assets.onecompiler.app/43ea4pg72/43enzm9r7/Grrenpinl.png" alt="Green Pin" />
+  </div>
+
+  <div class="icon-section">
+    <img src="https://assets.onecompiler.app/43ea4pg72/43enzm9r7/call-center.png" alt="Helpline" />
+  </div>
+</div>
+
+<style>
+  .modhumoti-inline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 20px;
+    padding: 15px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+    font-family: 'Segoe UI', sans-serif;
+    overflow-x: auto;
+  }
+
+  .logo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 120px;
+  }
+
+  .logo-section img {
+    height: 40px;
+  }
+
+  .logo-section p {
+    font-size: 12px;
+    margin: 4px 0 0;
+    color: #444;
+  }
+
+  .logo-section span {
+    color: #7BAF34;
+    font-weight: bold;
+  }
+
+  .icon-section img {
+    height: 50px;
+    border-radius: 6px;
+    transition: transform 0.3s ease;
+  }
+
+  .icon-section img:hover {
+    transform: scale(1.05);
+  }
+
+  @media (max-width: 600px) {
+    .modhumoti-inline {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .icon-section img {
+      height: 45px;
+    }
+
+    .logo-section {
+      min-width: auto;
+    }
+  }
+</style>
+<!-- Head Section (অবশ্যই UTF-8 charset যুক্ত করা লাগবে) -->
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali&family=Material+Icons+Outlined" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Popup Modal -->
+<div id="maintenancePopup" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-40 px-4">
+  <div class="relative bg-white rounded-xl shadow-xl w-full max-w-sm p-4 text-gray-800 text-[13px]"
+       style="font-family: 'Noto Sans Bengali', sans-serif;">
+       
+    <!-- Close Button -->
+    <button onclick="document.getElementById('maintenancePopup').style.display='none'"
+            class="absolute top-2 right-2 text-gray-500 hover:text-red-500">
+      <span class="material-icons-outlined text-[20px]">close</span>
+    </button>
+
+    <!-- Header with Gradient Text -->
+    <div class="flex items-center mb-2">
+      <img src="https://assets.onecompiler.app/43ea4pg72/43enzm9r7/mbl-logo.png" alt="Madhumoti" class="h-6 mr-2">
+      <h2 class="text-sm font-bold bg-gradient-to-r from-green-600 via-green-500 to-lime-500 text-transparent bg-clip-text">
+        মধুমতি ব্যাংক পিএলসি.
+      </h2>
+    </div>
+
+    <!-- Message -->
+    <p class="mb-3 leading-snug">
+      <strong> Pachar Bazar Branch</strong> মধুমতি ব্যাংক প্রতি রবিবার থেকে বৃহস্পতিবার সকাল  হতে সন্ধ্যা  পর্যন্ত খোলা থাকে ।
+    </p>
+
+    <!-- Time -->
+    <div class="bg-green-50 text-green-800 rounded-md p-2 text-center font-semibold leading-snug text-[12px] mb-3">
+      <p>শনিবার থেকে বৃহস্পতিবার <strong> সকল 10:00 হতে সন্ধ্যা 07:00 পর্যন্ত </strong> </p>
+      <p> শুক্রবার ও শনিবার <strong> বন্ধ থাকে </strong></p>
+    </div>
+
+    <!-- Helpline -->
+    <div class="flex items-center text-gray-600 text-xs">
+      <span class="material-icons-outlined text-green-600 text-sm mr-1">headset_mic</span>
+      <span>হেল্পলাইন:<strong> 8801918-104161</strong> </span>
+    </div>
+  </div>
+</div>
+<!-- Slim Top Image Slider (1607x519 ratio optimized) -->
+<div class="w-full overflow-hidden aspect-[1607/519] max-h-[200px] rounded-b-2xl shadow-md relative z-10">
+  <div id="topSlider" class="flex transition-transform duration-700 ease-in-out">
+    <img src="https://assets.onecompiler.app/43ea4pg72/43ep4w2mv/CRM.jpeg" class="w-full h-full object-cover flex-shrink-0" alt="Slide 1">
+    <img src="https://assets.onecompiler.app/43ea4pg72/43ep4w2mv/slide-idbanking.jpeg" class="w-full h-full object-cover flex-shrink-0" alt="Slide 2">
+  </div>
+</div>
+<br>
+
+<script>
+  const topSlider = document.getElementById('topSlider');
+  let slideIndex = 0;
+
+  setInterval(() => {
+    slideIndex = (slideIndex + 1) % topSlider.children.length;
+    topSlider.style.transform = `translateX(-${slideIndex * 100}%)`;
+  }, 4000);
+</script>
+
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Madhumoti Bank Pachhar Bazar Branch</title>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: linear-gradient(145deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      line-height: 1.6;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.85);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    }
+    .logo {
+      font-size: 32px;
+      font-weight: 800;
+      color: #00f7ff;
+      letter-spacing: 2px;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      height: 100%;
+      width: 260px;
+      background: rgba(0, 49, 83, 0.95);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 60px 20px;
+      transition: right 0.4s ease-in-out;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      margin: 15px 0;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #00ffff;
+    }
+    .menu-toggle {
+      font-size: 32px;
+      color: white;
+      cursor: pointer;
+    }
+    .nav-open {
+      right: 0;
+    }
+    .hero {
+      text-align: center;
+      padding: 120px 20px 60px;
+      background: linear-gradient(to right, #0f2027cc, #203a43cc), url('https://source.unsplash.com/1600x900/?technology');
+      background-size: cover;
+      background-blend-mode: overlay;
+    }
+    .hero h1 {
+      font-size: 42px;
+      font-weight: 800;
+      color: #ffffff;
+    }
+    .hero p {
+      margin-top: 15px;
+      font-size: 24px;
+      color: #00ffff;
+    }
+    .btn-contact {
+      display: inline-flex;
+      align-items: center;
+      background: linear-gradient(to right, #00bcd4, #007bff);
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      margin-top: 30px;
+      font-weight: 600;
+      border-radius: 30px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+    .btn-contact:hover {
+      background: linear-gradient(to right, #007bff, #00bcd4);
+    }
+    .btn-contact i {
+      margin-right: 10px;
+    }
+    .stats {
+      display: flex;
+      justify-content: space-around;
+      padding: 60px 20px;
+      background: linear-gradient(135deg, #06293e, #001f33);
+      text-align: center;
+      color: #cce7ff;
+    }
+    .stats div {
+      font-size: 20px;
+    }
+    .stats h2 {
+      font-size: 32px;
+      color: #00ffff;
+      margin-bottom: 10px;
+    }
+    .service-section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+      background: linear-gradient(to right, #e0f7fa, #fff3e0);
+      color: #333;
+    }
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      margin-bottom: 30px;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.6s ease-in-out;
+    }
+    .card.animate {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .card i {
+      font-size: 40px;
+      margin-bottom: 20px;
+      color: #007BFF;
+    }
+    .card h2 {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .card p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .custom-rating-box {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(145deg, #141e30, #243b55);
+      color: #ffffff;
+      text-align: center;
+      padding: 30px 20px;
+      border-radius: 20px;
+      max-width: 300px;
+      margin: 40px auto;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+    .rating-title {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #00f7ff;
+    }
+    .stars {
+      font-size: 28px;
+      margin: 10px 0;
+    }
+    .stars i {
+      color: #ffd700;
+      margin: 0 3px;
+      transition: transform 0.3s ease;
+    }
+    .stars i:hover {
+      transform: scale(1.2);
+    }
+    .rating-number {
+      font-size: 16px;
+      color: #cce7ff;
+    }
+    .custom-footer {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      padding: 60px 20px 30px;
+      text-align: center;
+    }
+    .footer-container {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      max-width: 1200px;
+      margin: auto;
+      align-items: center;
+    }
+    .footer-info h2,
+    .footer-social h2 {
+      font-size: 24px;
+      margin-bottom: 15px;
+      color: #ffffff;
+    }
+    .footer-info a,
+    .footer-info p {
+      color: #cce7ff;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .footer-info a:hover {
+      color: #00f7ff;
+    }
+    .social-icons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+    }
+    .social-icon {
+      color: #cce7ff;
+      font-size: 24px;
+      transition: 0.3s;
+    }
+    .social-icon:hover {
+      color: #00f7ff;
+      transform: scale(1.2);
+    }
+    .footer-bottom {
+      margin-top: 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      padding-top: 20px;
+      font-size: 14px;
+      color: #aaa;
+    }
+    @media (min-width: 768px) {
+      .footer-container {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Golam Mahmud Faridi</div>
+    <span class="menu-toggle material-icons-outlined" onclick="toggleMenu()">menu</span>
+    <nav id="mobileMenu">
+      <span class="menu-toggle material-icons-outlined" onclick="toggleMenu()">close</span>
+      <a href="home.html">Home</a>
+      <a href="police.html">Privacy and Policy</a>
+      <a href="service.html">Services</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+  <section class="hero">
+    <h1>Modumoti Bank PLC .  is the best place for</h1>
+    <p>Your Trashted Banking Partnar </p>
+    <a href="contact.html" class="btn-contact"><i class="material-icons-outlined">support_agent</i>Contact</a>
+  </section>
+<section class="stats">
+  <div>
+    <h2>292+</h2>
+    <p>Happy Clients</p>
+  </div>
+  <div>
+    <h2>10+</h2>
+    <p> Banking Certificate  </p>
+  </div>
+  <div>
+    <h2>10+</h2>
+    <p>Skilled Experts</p>
+  </div>
+  
+</section>
+  </section>
+  <div class="service-section">
+<div class="card">
+  <i class="fas fa-credit-card"></i>
+  <h2>Personal Banking</h2>
+  <p>Individual banking services including savings, current accounts, and more.</p>
+</div>
+<div class="card">
+  <i class="fas fa-business-time"></i>
+  <h2>Business Banking</h2>
+  <p>Comprehensive business services like business accounts, loans, and financial management.</p>
+</div>
+<div class="card">
+  <i class="fas fa-hand-holding-usd"></i>
+  <h2>Loan Services</h2>
+  <p>Various loan options such as personal, business, and home loans to meet your financial needs.</p>
+</div>
+<div class="card">
+  <i class="fas fa-mobile-alt"></i>
+  <h2>Mobile Banking</h2>
+  <p>Access banking services anytime, anywhere, with our mobile banking app.</p>
+</div>
+<div class="card">
+  <i class="fas fa-credit-card"></i>
+  <h2>ATM Services</h2>
+  <p>Convenient and secure access to your funds through our extensive network of ATMs.</p>
+</div>
+  </div>
+  <div class="custom-rating-box">
+    <div class="rating-title">User Rating</div>
+    <div class="stars">
+      <i class="fas fa-star full"></i>
+      <i class="fas fa-star full"></i>
+      <i class="fas fa-star full"></i>
+      <i class="fas fa-star full"></i>
+      <i class="fas fa-star-half-alt half"></i>
+    </div>
+    <div class="rating-number">4.8 out of 5</div>
+  </div>
+  <footer class="custom-footer">
+    <div class="footer-container">
+      <div class="footer-info">
+        <h2>Contact Us</h2>
+        <p>Email: <a href="mailto:gulammahmudforidi@gmail.com">info@gulammahmud.com</a></p>
+        <p>Phone: <a href="tel:+01918-104161">+01918-104161</a></p>
+      </div>
+      <div class="footer-social">
+        <h2>Follow Us</h2>
+        <div class="social-icons">
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 <a href="https://wa.me/message/BQ77IMY2MHW6E1" target="_blank" style="color: #FFD700; text-decoration: none; font-weight: bold;">Swygen Official</a> </p> All rights reserved.</p>
+    </div>
+  </footer>
+  <script>
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('nav-open');
+    }
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate');
+        } else {
+          entry.target.classList.remove('animate');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+    document.querySelectorAll('.card').forEach(card => {
+      observer.observe(card);
+    });
+  </script>
+</body>
+</html>
